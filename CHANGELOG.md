@@ -1,11 +1,3 @@
-# Phillsv87Cronofy Fork
-This is a fork of the original Cronofy repo - https://github.com/cronofy/cronofy-csharp
-
-This fork is fully compatible with the original Cronofy project and adds a modern asynchronous thread safe
-client named CronofyHttpClient that can be used in place of the CronofyAccountClient. I have only converted the methods I need at the time.
-
-----
-
 ## [1.4.0]
 
 * Adds for providing multiple users when requesting [Enterprise Connect delegated access](https://docs.cronofy.com/developers/api/enterprise-connect/delegated-access/) [#105]

@@ -1,3 +1,11 @@
+# Phillsv87Cronofy Fork
+This is a fork of the original Cronofy repo - https://github.com/cronofy/cronofy-csharp
+
+This fork is fully compatible with the original Cronofy project and adds a modern asynchronous thread safe
+client named CronofyHttpClient that can be used in place of the CronofyAccountClient. I have only converted the methods I need at the time.
+
+----
+
 # Cronofy
 
 [Cronofy](https://www.cronofy.com) - one API for all the calendars (Google, iCloud, Exchange, Office 365, Outlook.com)
