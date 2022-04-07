@@ -9,6 +9,17 @@
     /// </summary>
     public sealed class AvailabilityRequest
     {
+
+        /// <summary>
+        /// Default number of results to return
+        /// </summary>
+        public static int DefaultMaxResults=20;
+
+        /// <summary>
+        /// The max number of results that will be returned by the API
+        /// </summary>
+        public static int MaxMaxResults=512;
+
         /// <summary>
         /// Gets or sets the participant groups for the request.
         /// </summary>
@@ -51,6 +62,12 @@
         /// <value>The buffer.</value>
         [JsonProperty("buffer")]
         public Buffers Buffer { get; set; }
+
+        /// <summary>
+        /// The max number or results to return
+        /// </summary>
+        [JsonProperty("max_results")]
+        public int MaxResults{get;set;}=DefaultMaxResults;
 
         /// <summary>
         /// Class for serialization of a buffer.

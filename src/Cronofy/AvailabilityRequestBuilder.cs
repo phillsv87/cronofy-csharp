@@ -53,6 +53,8 @@
         /// </summary>
         private int? startInterval;
 
+        private int? maxResults;
+
         /// <summary>
         /// Sets the required duration of the request.
         /// </summary>
@@ -70,6 +72,18 @@
             Preconditions.True(minutes > 0, "minutes must be greater than zero");
 
             this.requiredDuration = minutes;
+
+            return this;
+        }
+
+        /// <summary>
+        /// Sets the max results of the request.
+        /// </summary>
+        public AvailabilityRequestBuilder MaxResults(int maxResults)
+        {
+            Preconditions.True(maxResults <= AvailabilityRequest.MaxMaxResults, "maxResults must be less than or equal to "+AvailabilityRequest.MaxMaxResults);
+
+            this.maxResults = maxResults;
 
             return this;
         }
@@ -294,6 +308,10 @@
                         },
                     };
                 }
+            }
+
+            if(this.maxResults.HasValue){
+                request.MaxResults=this.maxResults.Value;
             }
 
             request.Participants = participantGroups;
